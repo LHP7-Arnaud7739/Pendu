@@ -13,8 +13,94 @@
 
 <body>
 
+
+    <div class="row letter_div_btn ">
+
+<div id="mysteryName" class="m-5 p-5">
+
+       
+</div>
+        <div>
+
+            <!-- <input type="button" id="A" class="col-1 calc_btn " value="A" onclick="myDisplay(A)" />  -->
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary ">A</button>
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">B</button>
+
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">C</button>
+
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">D</button>
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary ">E</button>
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">F</button>
+
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">G</button>
+
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">H</button>
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary ">I</button>
+        </div>
+        <div>
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">J</button>
+
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">K</button>
+
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">L</button>
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary ">M</button>
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">N</button>
+
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">O</button>
+
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">P</button>
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">Q</button>
+
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">R</button>
+        </div>
+        <div class="text-center">
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary ">S</button>
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">T</button>
+
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">U</button>
+
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">V</button>
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary ">W</button>
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">X</button>
+
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">Y</button>
+
+
+            <button type="button" id="clavier" class="col-1 letter_btn m-3 btn btn-secondary">Z</button>
+        </div>
+        <div class="text-center">
+            <button type="button" id="newGame" class="col-6 letter_btn m-3 btn btn-secondary">Nouvelle Partie</button>
+        </div>
+    </div>
+
+
     <script>
         let jungle = ['lion', 'crocodile', 'leopard', 'singe', 'tigre']
+const buttonStartGame = document.getElementById("newGame")
+const clavier1 = document.getElementById("clavier")
+
         // let farm = ['poule', 'vache', 'ane', 'cheval', 'cochon']
 
         function myRandom(liste) {
@@ -22,21 +108,39 @@
 
         }
 
-        console.log(myRandom(jungle))
+
         // console.log(myRandom(farm))
         function searchLetter(letter, word) {
-            let indexLetter = new array()
+            console.log(word)
+            let indexLetter = new Array()
             arrayWord = word.split("")
-            
-            for (index = 0; index <= arrayWord.length - 1; index++)
-                  element = arrayWord[index];
-  
-            
-return indexLetter
 
+            for (index = 0; index <= arrayWord.length - 1; index++) {
+                element = arrayWord[index]
+                if (letter === element) {
+                    indexLetter.push(index)
+
+                }
+            }
+            if (indexLetter.length == 0)
+                return -1
+            else
+                return indexLetter
 
 
         }
+
+        console.log(searchLetter("i", myRandom(jungle)))
+
+        let display = document.getElementById("mysteryName")
+        button.addEventListener("click", function (serachLetter) {
+            display.value += searchLetter
+
+        })
+
+        function StartGame()
+
+        
     </script>
 </body>
 
