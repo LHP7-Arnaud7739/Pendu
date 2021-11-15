@@ -1,23 +1,27 @@
+
+
+
 .container {
     background-color: #C0C0C0;
     border-radius: 10px;
-    box-shadow: 15px 5px 5px rgb(0, 0, 0)
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .container1 {
     background-color: #D3D3D3;
     border-radius: 10px;
+    font-size: xx-large;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .clavier {
     background-color: #C0C0C0;
     border-radius: 10px;
-    box-shadow: 15px 5px 5px rgb(0, 0, 0)
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.letter_btn {
-    box-shadow: 15px 5px 5px rgb(0, 0, 0);
+.letter_btn {background-color: ;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     border-radius: 10px;
 
 
