@@ -1,6 +1,6 @@
 const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 const myKeyboard = document.getElementById("myKeyboard")
-const petList = ["panda", "lion", "tigre", "ecureuil", "elephant", "cheval", "leopard"]
+const petList = ["panda", "lion", "tigre", "ecureuil", "elephant", "cheval", "leopard", "chien", "chat", "kangourou", "loup", "pingouin", "koala", "manchot", "hippotame", "guepard", "zebre", "griffon", "linx"]
 
 
 
@@ -20,7 +20,7 @@ console.log(pet)
 alphabet.forEach(element => {
     let myLetter = element
     myLetter = myLetter.toUpperCase()
-    let myKey = `<button class="m-2 col-2 btn btn-outline-dark id="myKey${myLetter}">${myLetter}</button>`
+    let myKey = `<button class="myKey m-2 col-2 btn btn-outline-dark id="myKey${myLetter}">${myLetter}</button>`
     myKeyboard.innerHTML += (myKey)
 })
 
@@ -47,16 +47,34 @@ const arrayPet = pet.split("")
 arrayPet.forEach((element, index) => {
     let myLetter = element;
     let myIndex = index;
-    let myCase = `<div class="border border-dark col-lg-1 col-1 rounded  myLetter" id="indexLetter${myIndex}">☠️</div>`
-    petName.innerHTML += myCase;
-});
+    let myCase = `<div class="border border-dark col-lg-1 col-1 rounded  myLetter" id="indexLetter${myIndex}">_</div>`
+    petName.innerHTML += myCase
+})
+
+let nbLetter = 0
+let life = 10
+
+
+
+
+
 myKeyboard.addEventListener("click", (e) => {
     console.log(e.target)
     if (e.target.nodeName == "BUTTON") {
-        console.log(e.target.textContent)
+        console.log(e.target.innerText)
+        e.target.className = "m-2 col-2 btn btn-danger"
+e.target.disabled = true
+         arrayPet.forEach((element, index) => {
+ if(e.target.innerText.toLowerCase() == element){
+document.getElementById(`indexLetter${index}`)
+.innerText= element
+nbLetter++
+ }
+        })
+       if (nbLetter == arrayPet.length){
+           window.confirm("Gagner! Voulez-vous rejouer ?")
+       }
 
 
     }
-})
-let dennis = 2
-document.getElementById(`indexLetter${dennis}`).innerText = "z"
+    })
